@@ -1,6 +1,6 @@
 # Catalog
 
-image:https://img.shields.io/badge/vert.x-4.0.2-purple.svg[link="https://vertx.io"]
+[![Vertx](https://img.shields.io/badge/vert.x-4.0.3-purple.svg)](link="https://vertx.io")
 
 The app starts on the port 80
 
