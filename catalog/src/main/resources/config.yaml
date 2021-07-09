@@ -1,0 +1,21 @@
+############################
+# Server
+############################
+server:
+  port: 80
+
+############################
+# Mongo>
+############################
+mongo:
+  host: localhost
+  port: 27017
+  username: shpl
+  password: shpl
+  db_name: catalog
+  authSource: admin
+  maxPoolSize: 5
+  connectTimeoutMS: 3000
+  socketTimeoutMS: 1000
+
+
