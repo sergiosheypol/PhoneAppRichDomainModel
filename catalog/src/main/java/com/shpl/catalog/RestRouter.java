@@ -1,14 +1,13 @@
-package com.shpl.catalog.router;
+package com.shpl.catalog;
 
-import com.shpl.catalog.handler.CatalogHandler;
 import io.vertx.reactivex.core.Vertx;
 import io.vertx.reactivex.ext.web.Router;
 
-public class CatalogRouter {
+public class RestRouter {
 
-  private final CatalogHandler handler;
+  private final RestHandler handler;
 
-  public CatalogRouter(final CatalogHandler handler) {
+  public RestRouter(final RestHandler handler) {
     this.handler = handler;
   }
 

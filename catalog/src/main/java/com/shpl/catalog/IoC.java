@@ -1,22 +1,12 @@
 package com.shpl.catalog;
 
-import com.shpl.catalog.handler.CatalogHandler;
-import com.shpl.catalog.mapper.PhoneMapper;
-import com.shpl.catalog.mongo.MongoConfig;
-import com.shpl.catalog.repository.CatalogRepository;
-import com.shpl.catalog.repository.mongo.MongoCatalogRepository;
-import com.shpl.catalog.router.CatalogRouter;
-import com.shpl.catalog.service.CatalogService;
-
 import static java.util.Objects.isNull;
 
 public final class IoC {
-  public CatalogService service;
-  public CatalogRepository repository;
-  public CatalogHandler handler;
-  public CatalogRouter router;
-  public PhoneMapper mapper;
+  public RestHandler handler;
+  public RestRouter router;
   public MongoConfig mongo;
+  public MongoRepository repository;
 
   private static IoC instance = null;
 
@@ -29,11 +19,9 @@ public final class IoC {
 
   private IoC() {
     this.mongo = new MongoConfig();
-    this.mapper = new PhoneMapper();
-    this.repository = new MongoCatalogRepository(this.mongo, this.mapper);
-    this.service = new CatalogService(this.repository);
-    this.handler = new CatalogHandler(this.service, this.mapper);
-    this.router = new CatalogRouter(this.handler);
+    this.repository = new MongoRepository(this.mongo);
+    this.handler = new RestHandler(this.repository);
+    this.router = new RestRouter(this.handler);
 
   }
 }

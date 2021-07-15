@@ -1,15 +1,14 @@
 package com.shpl.catalog;
 
-import com.shpl.catalog.properties.ConfigProperties;
 import io.reactivex.Completable;
 import io.vertx.core.impl.logging.Logger;
 import io.vertx.core.impl.logging.LoggerFactory;
 import io.vertx.reactivex.core.AbstractVerticle;
 import io.vertx.reactivex.core.http.HttpServer;
 
-public class CatalogVerticle extends AbstractVerticle {
+public class MainVerticle extends AbstractVerticle {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(CatalogVerticle.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(MainVerticle.class);
 
   @Override
   @SuppressWarnings("CheckReturnValue")

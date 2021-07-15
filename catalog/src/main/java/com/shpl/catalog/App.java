@@ -21,7 +21,7 @@ public class App {
 
     // Read properties
     config(Vertx.vertx()).flatMap(json -> Vertx.currentContext().owner()
-      .rxDeployVerticle(new CatalogVerticle(), new DeploymentOptions().setConfig(json)))
+      .rxDeployVerticle(new MainVerticle(), new DeploymentOptions().setConfig(json)))
       .subscribe(id -> LOGGER.info(String.format("Verticle with id {%s} deployed successfully", id)),
         err -> LOGGER.error("Error deploying verticle", err));
 

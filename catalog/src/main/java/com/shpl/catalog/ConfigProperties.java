@@ -1,4 +1,4 @@
-package com.shpl.catalog.properties;
+package com.shpl.catalog;
 
 import io.vertx.core.json.JsonObject;
 import io.vertx.reactivex.core.Vertx;

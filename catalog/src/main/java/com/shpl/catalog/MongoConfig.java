@@ -1,6 +1,5 @@
-package com.shpl.catalog.mongo;
+package com.shpl.catalog;
 
-import com.shpl.catalog.properties.ConfigProperties;
 import io.vertx.reactivex.core.Vertx;
 import io.vertx.reactivex.ext.mongo.MongoClient;
 
